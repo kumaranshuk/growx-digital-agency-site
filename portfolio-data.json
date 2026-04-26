@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Election Campaign 2024",
+    "category": "Political",
+    "description": "Comprehensive digital campaign management resulting in 40% voter engagement increase",
+    "image": "https://source.unsplash.com/random/400x300/?political,rally",
+    "client": "Political Candidate"
+  },
+  {
+    "id": 2,
+    "title": "Leadership Summit",
+    "category": "Political",
+    "description": "Strategic communication campaign for political leadership positioning",
+    "image": "https://source.unsplash.com/random/400x300/?politician,speech",
+    "client": "Government Agency"
+  },
+  {
+    "id": 3,
+    "title": "Grassroots Campaign",
+    "category": "Political",
+    "description": "Community outreach and mobilization campaign with measurable impact",
+    "image": "https://source.unsplash.com/random/400x300/?campaign,signs",
+    "client": "Political Party"
+  },
+  {
+    "id": 4,
+    "title": "Tech Conference 2024",
+    "category": "Events",
+    "description": "Full-service event management for 500+ attendees with live streaming",
+    "image": "https://source.unsplash.com/random/400x300/?corporate,event",
+    "client": "Tech Corporation"
+  },
+  {
+    "id": 5,
+    "title": "Product Launch Event",
+    "category": "Events",
+    "description": "Spectacular product unveiling with media coverage and stakeholder engagement",
+    "image": "https://source.unsplash.com/random/400x300/?product,launch",
+    "client": "Startup"
+  },
+  {
+    "id": 6,
+    "title": "Industry Awards Night",
+    "category": "Events",
+    "description": "Prestigious awards ceremony production with celebrity appearances",
+    "image": "https://source.unsplash.com/random/400x300/?award,ceremony",
+    "client": "Industry Association"
+  },
+  {
+    "id": 7,
+    "title": "Tech Startup Rebrand",
+    "category": "Branding",
+    "description": "Complete brand transformation resulting in 300% growth in brand recognition",
+    "image": "https://source.unsplash.com/random/400x300/?brand,identity",
+    "client": "Tech Startup"
+  },
+  {
+    "id": 8,
+    "title": "Corporate Identity Design",
+    "category": "Branding",
+    "description": "Modern logo and brand guidelines for established corporation",
+    "image": "https://source.unsplash.com/random/400x300/?logo,design",
+    "client": "Fortune 500 Company"
+  },
+  {
+    "id": 9,
+    "title": "Product Packaging",
+    "category": "Branding",
+    "description": "Innovative packaging design that increased market share by 25%",
+    "image": "https://source.unsplash.com/random/400x300/?packaging,design",
+    "client": "Consumer Brand"
+  },
+  {
+    "id": 10,
+    "title": "Fashion Campaign",
+    "category": "Shoots",
+    "description": "High-end fashion photography for luxury brand campaign",
+    "image": "https://source.unsplash.com/random/400x300/?fashion,photography",
+    "client": "Luxury Fashion Brand"
+  },
+  {
+    "id": 11,
+    "title": "Commercial Production",
+    "category": "Shoots",
+    "description": "Cinematic commercial video production with professional actors",
+    "image": "https://source.unsplash.com/random/400x300/?commercial,shoot",
+    "client": "Consumer Goods"
+  },
+  {
+    "id": 12,
+    "title": "Executive Portraits",
+    "category": "Shoots",
+    "description": "Professional headshots and executive portraits for corporate leaders",
+    "image": "https://source.unsplash.com/random/400x300/?portrait,photography",
+    "client": "Corporate"
+  }
+]

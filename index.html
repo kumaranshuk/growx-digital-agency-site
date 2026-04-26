@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow X Technologies Pvt. Ltd. - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            color-scheme: dark;
+            --color-bg: #0B0B0B;
+            --color-surface: #121212;
+            --color-border: #1F1F1F;
+            --color-primary: #00FF88;
+            --color-primary-hover: #00CC6A;
+            --color-text: #FFFFFF;
+            --color-muted: #A0A0A0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--color-bg);
+            color: var(--color-text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        header {
+            backdrop-filter: blur(18px);
+            transition: background 0.35s ease, transform 0.25s ease, box-shadow 0.35s ease;
+        }
+
+        header.scrolled {
+            background: rgba(11, 11, 11, 0.95);
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: #000000;
+            border-radius: 8px;
+            padding: 14px 28px;
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.22);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--color-primary);
+            color: #FFFFFF;
+            background: transparent;
+            border-radius: 8px;
+            padding: 14px 28px;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 255, 136, 0.08);
+            box-shadow: 0 0 18px rgba(0, 255, 136, 0.14);
+        }
+
+        .card-surface {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-surface:hover {
+            transform: translateY(-3px) scale(1.03);
+            border-color: var(--color-primary-hover);
+            box-shadow: 0 24px 50px rgba(0, 255, 136, 0.12);
+        }
+
+        .shadow-glow {
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.08);
+        }
+
+        .text-muted {
+            color: var(--color-muted);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(11,11,11,0.10), rgba(11,11,11,0.95));
+        }
+
+        .portfolio-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.7s ease;
+            will-change: transform;
+        }
+
+        .testimonial-card {
+            flex: 0 0 100%;
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.3333% - 16px);
+                min-width: calc(33.3333% - 16px);
+                max-width: calc(33.3333% - 16px);
+            }
+        }
+
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <!-- Netlify Identity Widget for Admin Panel -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="bg-[#0B0B0B] text-white">
+    <header class="fixed inset-x-0 top-0 z-50 h-[80px]">
+        <div class="container flex h-full items-center justify-between">
+            <a href="index.html" class="text-lg md:text-xl font-semibold tracking-[0.25em] text-green-400">Grow X Technologies</a>
+            <nav class="hidden md:flex items-center gap-10 text-sm tracking-[0.2em] text-muted">
+                <a href="#home" class="hover:text-green-400 transition">Home</a>
+                <a href="#about" class="hover:text-green-400 transition">About</a>
+                <a href="#services" class="hover:text-green-400 transition">Services</a>
+                <a href="#portfolio" class="hover:text-green-400 transition">Portfolio</a>
+                <a href="#contact-preview" class="hover:text-green-400 transition">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="#contact-preview" class="btn-primary hidden md:inline-flex">Get Consultation</a>
+                <button id="menu-btn" class="md:hidden text-white text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-[#0B0B0B] border-t border-[#1F1F1F]">
+            <div class="container py-4 space-y-3 text-sm text-muted">
+                <a href="#home" class="block hover:text-green-400 transition">Home</a>
+                <a href="#about" class="block hover:text-green-400 transition">About</a>
+                <a href="#services" class="block hover:text-green-400 transition">Services</a>
+                <a href="#portfolio" class="block hover:text-green-400 transition">Portfolio</a>
+                <a href="#contact-preview" class="block hover:text-green-400 transition">Contact</a>
+                <a href="#contact-preview" class="block mt-2 btn-primary text-center">Get Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-[120px]">
+        <section id="home" class="relative min-h-[90vh] overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,255,136,0.16),_transparent_26%),_linear-gradient(180deg,_rgba(11,11,11,0.8),_rgba(11,11,11,0.95))]"></div>
+            <div class="container relative grid items-center gap-12 lg:grid-cols-2">
+                <div class="space-y-8 max-w-2xl fade-in-on-scroll">
+                    <span class="text-xs uppercase tracking-[0.45em] text-green-400">Premium Agency</span>
+                    <h1 class="text-[56px] font-black leading-[1.03]">Driving influence. Building brands. Delivering growth.</h1>
+                    <p class="max-w-xl text-[16px] leading-[1.75] text-muted">We help brands, businesses and leaders grow through sharp strategy, premium media and measurable execution.</p>
+                    <div class="flex flex-col gap-4 sm:flex-row">
+                        <a href="#contact-preview" class="btn-primary inline-flex items-center justify-center">Get Free Consultation</a>
+                        <a href="#portfolio" class="btn-secondary inline-flex items-center justify-center">View Our Work</a>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-[24px] border border-[#1F1F1F] shadow-glow fade-in-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="Creative agency workspace" class="h-[520px] w-full object-cover" />
+                    <div class="absolute inset-0 hero-overlay"></div>
+                    <div class="absolute left-6 bottom-6 rounded-[16px] border border-[#1F1F1F] bg-black/70 px-4 py-3 text-sm text-green-400 backdrop-blur-sm">
+                        <p>Featured Case</p>
+                        <h2 class="mt-3 text-[24px] font-semibold">Studio shoot + launch campaign</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-14 bg-[#121212] py-10 border-t border-[#1F1F1F] fade-in-on-scroll">
+            <div class="container grid grid-cols-1 gap-6 md:grid-cols-4 text-center text-sm uppercase tracking-[0.32em] text-muted">
+                <div class="rounded-[16px] border border-[#1F1F1F] bg-[#0F0F0F] p-6">
+                    <p class="text-[28px] font-bold text-green-400">50+</p>
+                    Campaigns Executed
+                </div>
+                <div class="rounded-[16px] border border-[#1F1F1F] bg-[#0F0F0F] p-6">
+                    <p class="text-[28px] font-bold text-green-400">20+</p>
+                    Brands Worked With
+                </div>
+                <div class="rounded-[16px] border border-[#1F1F1F] bg-[#0F0F0F] p-6">
+                    <p class="text-[28px] font-bold text-green-400">100+</p>
+                    Events Managed
+                </div>
+                <div class="rounded-[16px] border border-[#1F1F1F] bg-[#0F0F0F] p-6">
+                    <p class="text-[28px] font-bold text-green-400">1M+</p>
+                    Reach Generated
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 fade-in-on-scroll">
+            <div class="container grid gap-12 lg:grid-cols-2 items-center">
+                <div class="relative overflow-hidden rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Team collaboration" class="h-full w-full object-cover" />
+                    <div class="absolute left-6 top-6 rounded-[14px] border border-[#1F1F1F] bg-black/80 px-4 py-3 text-sm text-green-400 backdrop-blur-sm">5+ Years Experience</div>
+                </div>
+                <div class="space-y-8">
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">Who We Are</span>
+                    <h2 class="text-[36px] font-semibold">Premium strategy meets flawless execution.</h2>
+                    <p class="text-[16px] leading-[1.75] text-muted max-w-xl">Grow X Technologies is a premium growth agency that blends strategy, creative production and campaign execution. We partner with clients who want exceptional business outcomes, not just activity.</p>
+                    <a href="about.html" class="btn-secondary inline-flex items-center justify-center">Know More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-[#121212] fade-in-on-scroll">
+            <div class="container">
+                <div class="max-w-3xl space-y-4 text-center mx-auto mb-12">
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">What We Do</span>
+                    <h2 class="text-[36px] font-semibold">Core services for high-impact brands.</h2>
+                </div>
+                <div class="grid gap-6">
+                    <div class="grid gap-6 lg:grid-cols-3">
+                        <article class="card-surface fade-in-on-scroll">
+                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-[22px] font-medium mb-3">Digital Marketing</h3>
+                            <p class="text-[16px] leading-[1.75] text-muted">Strategy, campaigns, ads and content to grow your footprint.</p>
+                        </article>
+                        <article class="card-surface fade-in-on-scroll">
+                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h3 class="text-[22px] font-medium mb-3">Political Campaigns</h3>
+                            <p class="text-[16px] leading-[1.75] text-muted">Messaging, outreach and engagement built to win.</p>
+                        </article>
+                        <article class="card-surface fade-in-on-scroll">
+                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3 class="text-[22px] font-medium mb-3">Media Production</h3>
+                            <p class="text-[16px] leading-[1.75] text-muted">Video, photography and branded content with premium polish.</p>
+                        </article>
+                    </div>
+                    <div class="grid gap-6 lg:grid-cols-2">
+                        <article class="card-surface fade-in-on-scroll">
+                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3 class="text-[22px] font-medium mb-3">Event Management</h3>
+                            <p class="text-[16px] leading-[1.75] text-muted">Planning and executing high-impact live and hybrid experiences.</p>
+                        </article>
+                        <article class="card-surface fade-in-on-scroll">
+                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 class="text-[22px] font-medium mb-3">Branding & PR</h3>
+                            <p class="text-[16px] leading-[1.75] text-muted">Identity, positioning and reputation management for premium brands.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-20 fade-in-on-scroll">
+            <div class="container">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-10">
+                    <div>
+                        <span class="text-sm uppercase tracking-[0.35em] text-green-400">Our Work</span>
+                        <h2 class="text-[36px] font-semibold mt-4">Portfolio highlights</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-3 text-sm text-muted">
+                        <span class="rounded-full border border-[#1F1F1F] bg-[#0F0F0F] px-4 py-2">Events</span>
+                        <span class="rounded-full border border-[#1F1F1F] bg-[#0F0F0F] px-4 py-2">Political</span>
+                        <span class="rounded-full border border-[#1F1F1F] bg-[#0F0F0F] px-4 py-2">Production</span>
+                    </div>
+                </div>
+                <div class="grid gap-6 lg:grid-cols-4 lg:auto-rows-[240px]">
+                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212] lg:col-span-2 lg:row-span-2">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Featured campaign" class="h-full w-full object-cover" />
+                        <div class="portfolio-overlay">
+                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                        </div>
+                    </a>
+                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
+                        <img src="https://images.unsplash.com/photo-1515165562835-caf8d7cdb9f4?auto=format&fit=crop&w=800&q=80" alt="Brand shoot" class="h-full w-full object-cover" />
+                        <div class="portfolio-overlay">
+                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                        </div>
+                    </a>
+                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
+                        <img src="https://images.unsplash.com/photo-1517244683846-8af5f7cc0b1d?auto=format&fit=crop&w=800&q=80" alt="Strategy meeting" class="h-full w-full object-cover" />
+                        <div class="portfolio-overlay">
+                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                        </div>
+                    </a>
+                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Live event" class="h-full w-full object-cover" />
+                        <div class="portfolio-overlay">
+                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                        </div>
+                    </a>
+                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212] lg:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Campaign launch" class="h-full w-full object-cover" />
+                        <div class="portfolio-overlay">
+                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="mt-10 text-center">
+                    <a href="portfolio.html" class="btn-secondary inline-flex items-center justify-center">View Full Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black fade-in-on-scroll">
+            <div class="container">
+                <div class="max-w-3xl text-center mx-auto mb-12">
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">Why Choose Us</span>
+                    <h2 class="text-[36px] font-semibold mt-4">Strategic, premium, proven.</h2>
+                </div>
+                <div class="grid gap-6 lg:grid-cols-4">
+                    <div class="card-surface fade-in-on-scroll text-center">
+                        <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-[22px] font-medium mb-3">Strategy First</h3>
+                        <p class="text-[16px] text-muted leading-[1.75]">Planning with precision before any execution begins.</p>
+                    </div>
+                    <div class="card-surface fade-in-on-scroll text-center">
+                        <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="text-[22px] font-medium mb-3">Execution Focused</h3>
+                        <p class="text-[16px] text-muted leading-[1.75]">Fast, efficient delivery without compromising quality.</p>
+                    </div>
+                    <div class="card-surface fade-in-on-scroll text-center">
+                        <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="text-[22px] font-medium mb-3">Premium Production</h3>
+                        <p class="text-[16px] text-muted leading-[1.75]">High-end creative content that looks aspirational.</p>
+                    </div>
+                    <div class="card-surface fade-in-on-scroll text-center">
+                        <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-[22px] font-medium mb-3">Proven Results</h3>
+                        <p class="text-[16px] text-muted leading-[1.75]">Data-led campaigns designed to move the needle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 fade-in-on-scroll">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">How We Work</span>
+                    <h2 class="text-[36px] font-semibold mt-4">A premium 4-step process</h2>
+                </div>
+                <div class="relative overflow-hidden rounded-[24px] border border-[#1F1F1F] bg-[#121212] p-8">
+                    <div class="absolute left-0 right-0 top-1/2 h-[1px] bg-[#1F1F1F]"></div>
+                    <div class="relative grid gap-6 lg:grid-cols-4">
+                        <div class="card-surface fade-in-on-scroll text-center">
+                            <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black font-semibold">1</div>
+                            <h3 class="text-[22px] font-medium mb-3">Discovery</h3>
+                            <p class="text-[16px] text-muted leading-[1.75]">We begin with deep understanding of your goals and audience.</p>
+                        </div>
+                        <div class="card-surface fade-in-on-scroll text-center">
+                            <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black font-semibold">2</div>
+                            <h3 class="text-[22px] font-medium mb-3">Strategy</h3>
+                            <p class="text-[16px] text-muted leading-[1.75]">Blueprints tailored for impact and premium positioning.</p>
+                        </div>
+                        <div class="card-surface fade-in-on-scroll text-center">
+                            <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black font-semibold">3</div>
+                            <h3 class="text-[22px] font-medium mb-3">Execution</h3>
+                            <p class="text-[16px] text-muted leading-[1.75]">Creative, digital and live execution with precision.</p>
+                        </div>
+                        <div class="card-surface fade-in-on-scroll text-center">
+                            <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black font-semibold">4</div>
+                            <h3 class="text-[22px] font-medium mb-3">Growth</h3>
+                            <p class="text-[16px] text-muted leading-[1.75]">Insights, optimization and scaling for long-term growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#121212] fade-in-on-scroll">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">What Clients Say</span>
+                    <h2 class="text-[36px] font-semibold mt-4">Testimonials</h2>
+                </div>
+                <div class="relative overflow-hidden rounded-[24px] border border-[#1F1F1F] bg-[#0F0F0F] p-6 shadow-glow">
+                    <div class="testimonial-track">
+                        <article class="testimonial-card card-surface">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-400 text-black font-semibold">P</span>
+                                <div>
+                                    <p class="text-[16px] font-semibold text-green-400">Priya Singh</p>
+                                    <p class="text-[14px] text-muted">Founder</p>
+                                </div>
+                            </div>
+                            <p class="text-[16px] leading-[1.75] text-muted">"Grow X transformed our launch campaign with premium creative direction and flawless execution. The results were beyond expectations."</p>
+                        </article>
+                        <article class="testimonial-card card-surface">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-400 text-black font-semibold">R</span>
+                                <div>
+                                    <p class="text-[16px] font-semibold text-green-400">Rahul Mehra</p>
+                                    <p class="text-[14px] text-muted">Campaign Lead</p>
+                                </div>
+                            </div>
+                            <p class="text-[16px] leading-[1.75] text-muted">"The campaign lifted our reach and delivered measurable growth across multiple markets. Their team feels like a true partner."</p>
+                        </article>
+                        <article class="testimonial-card card-surface">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-400 text-black font-semibold">A</span>
+                                <div>
+                                    <p class="text-[16px] font-semibold text-green-400">Ananya Verma</p>
+                                    <p class="text-[14px] text-muted">Brand Director</p>
+                                </div>
+                            </div>
+                            <p class="text-[16px] leading-[1.75] text-muted">"From strategy to production, every step was premium, responsive, and results-focused. We trusted them with our reputation and they delivered."</p>
+                        </article>
+                        <article class="testimonial-card card-surface">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-400 text-black font-semibold">S</span>
+                                <div>
+                                    <p class="text-[16px] font-semibold text-green-400">Sakshi Patel</p>
+                                    <p class="text-[14px] text-muted">Creative Director</p>
+                                </div>
+                            </div>
+                            <p class="text-[16px] leading-[1.75] text-muted">"Their creative ideas and rapid delivery made a big difference for our campaign. Everything felt premium and well-coordinated."</p>
+                        </article>
+                        <article class="testimonial-card card-surface">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-400 text-black font-semibold">M</span>
+                                <div>
+                                    <p class="text-[16px] font-semibold text-green-400">Manish Kumar</p>
+                                    <p class="text-[14px] text-muted">Operations Head</p>
+                                </div>
+                            </div>
+                            <p class="text-[16px] leading-[1.75] text-muted">"Their hands-on approach and premium quality work made our event stand out. We executed flawlessly together."</p>
+                        </article>
+                    </div>
+                    <div class="mt-8 flex justify-center gap-3">
+                        <button id="testimonial-prev" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1F1F] bg-[#121212] text-green-400 hover:bg-green-400/10 transition">‹</button>
+                        <button id="testimonial-next" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1F1F] bg-[#121212] text-green-400 hover:bg-green-400/10 transition">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-black fade-in-on-scroll">
+            <div class="container text-center">
+                <div class="relative overflow-hidden rounded-[24px] border border-[#1F1F1F] bg-[#121212] p-12">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-400/10 via-transparent to-black opacity-80"></div>
+                    <div class="relative">
+                        <h2 class="text-[56px] font-black leading-[1.03]">Let's build something powerful together.</h2>
+                        <p class="mx-auto mt-6 max-w-2xl text-[16px] leading-[1.75] text-muted">Partner with Grow X Technologies for campaigns, productions and brand journeys that move markets.</p>
+                        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
+                            <a href="#contact-preview" class="btn-primary">Get Free Consultation</a>
+                            <a href="contact.html" class="btn-secondary">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-preview" class="py-20 bg-[#121212] fade-in-on-scroll">
+            <div class="container">
+                <div class="grid gap-6 lg:grid-cols-3">
+                    <div class="card-surface">
+                        <h3 class="text-[22px] font-medium text-green-400 mb-4">Phone</h3>
+                        <p class="text-[16px] text-muted leading-[1.75]">+91 98765 43210</p>
+                        <p class="text-[16px] text-muted leading-[1.75]">+91 98765 43211</p>
+                    </div>
+                    <div class="card-surface">
+                        <h3 class="text-[22px] font-medium text-green-400 mb-4">Email</h3>
+                        <p class="text-[16px] text-muted leading-[1.75]">hello@growxtech.com</p>
+                        <p class="text-[16px] text-muted leading-[1.75]">projects@growxtech.com</p>
+                    </div>
+                    <div class="card-surface">
+                        <h3 class="text-[22px] font-medium text-green-400 mb-4">Location</h3>
+                        <p class="text-[16px] text-muted leading-[1.75]">123 Business District</p>
+                        <p class="text-[16px] text-muted leading-[1.75]">New Delhi, Delhi 110001</p>
+                        <a href="https://wa.me/919876543210" target="_blank" class="mt-6 inline-flex items-center gap-3 btn-primary"> <i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black border-t border-[#1F1F1F] py-16 fade-in-on-scroll">
+        <div class="container">
+            <div class="grid gap-10 lg:grid-cols-4">
+                <div class="space-y-4">
+                    <p class="text-[22px] font-semibold text-green-400">Grow X Technologies</p>
+                    <p class="text-[16px] text-muted leading-[1.75] max-w-md">A premium growth agency delivering strategy, media and execution for high-impact brands and campaigns.</p>
+                </div>
+                <div>
+                    <h3 class="text-[18px] font-semibold mb-5">Company</h3>
+                    <ul class="space-y-3 text-muted text-[14px]">
+                        <li><a href="#home" class="hover:text-green-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-green-400 transition">About</a></li>
+                        <li><a href="#services" class="hover:text-green-400 transition">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-green-400 transition">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-[18px] font-semibold mb-5">Services</h3>
+                    <ul class="space-y-3 text-muted text-[14px]">
+                        <li><a href="services.html" class="hover:text-green-400 transition">Digital Marketing</a></li>
+                        <li><a href="services.html" class="hover:text-green-400 transition">Branding & PR</a></li>
+                        <li><a href="services.html" class="hover:text-green-400 transition">Media Production</a></li>
+                        <li><a href="services.html" class="hover:text-green-400 transition">Event Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-[18px] font-semibold mb-5">Contact</h3>
+                    <p class="text-[16px] text-muted leading-[1.75]">hello@growxtech.com</p>
+                    <p class="text-[16px] text-muted leading-[1.75]">+91 98765 43210</p>
+                    <div class="mt-6 flex items-center gap-4 text-muted text-lg">
+                        <a href="#" class="hover:text-green-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-green-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-green-400 transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-green-400 transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-[14px] text-muted">&copy; 2026 Grow X Technologies Pvt. Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919876543210" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-400 text-black shadow-[0_18px_60px_rgba(0,255,136,0.18)] hover:scale-105 transition">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

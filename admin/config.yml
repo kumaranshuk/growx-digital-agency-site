@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: portfolio
+    label: Portfolio
+    folder: _portfolio
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Category", name: "category", widget: "select", options: ["Political", "Events", "Branding", "Shoots", "Digital Marketing"], required: true }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - { label: "Client", name: "client", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false }
