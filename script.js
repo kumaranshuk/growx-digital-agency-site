@@ -62,9 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    if (filterButtons.length > 0 && portfolioItems.length > 0) {
+    if (filterButtons.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 filterButtons.forEach(btn => {
@@ -75,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.remove('bg-gray-800', 'text-white');
                 this.classList.add('bg-green-400', 'text-black');
                 const filterValue = this.getAttribute('data-filter');
+                const portfolioItems = document.querySelectorAll('.portfolio-item');
                 portfolioItems.forEach(item => {
                     if (filterValue === 'all' || item.classList.contains(filterValue)) {
                         item.style.display = 'block';

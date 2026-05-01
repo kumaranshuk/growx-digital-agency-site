@@ -1,98 +1,476 @@
-[
-  {
-    "id": 1,
-    "title": "Election Campaign 2024",
-    "category": "Political",
-    "description": "Comprehensive digital campaign management resulting in 40% voter engagement increase",
-    "image": "https://source.unsplash.com/random/400x300/?political,rally",
-    "client": "Political Candidate"
-  },
-  {
-    "id": 2,
-    "title": "Leadership Summit",
-    "category": "Political",
-    "description": "Strategic communication campaign for political leadership positioning",
-    "image": "https://source.unsplash.com/random/400x300/?politician,speech",
-    "client": "Government Agency"
-  },
-  {
-    "id": 3,
-    "title": "Grassroots Campaign",
-    "category": "Political",
-    "description": "Community outreach and mobilization campaign with measurable impact",
-    "image": "https://source.unsplash.com/random/400x300/?campaign,signs",
-    "client": "Political Party"
-  },
-  {
-    "id": 4,
-    "title": "Tech Conference 2024",
-    "category": "Events",
-    "description": "Full-service event management for 500+ attendees with live streaming",
-    "image": "https://source.unsplash.com/random/400x300/?corporate,event",
-    "client": "Tech Corporation"
-  },
-  {
-    "id": 5,
-    "title": "Product Launch Event",
-    "category": "Events",
-    "description": "Spectacular product unveiling with media coverage and stakeholder engagement",
-    "image": "https://source.unsplash.com/random/400x300/?product,launch",
-    "client": "Startup"
-  },
-  {
-    "id": 6,
-    "title": "Industry Awards Night",
-    "category": "Events",
-    "description": "Prestigious awards ceremony production with celebrity appearances",
-    "image": "https://source.unsplash.com/random/400x300/?award,ceremony",
-    "client": "Industry Association"
-  },
-  {
-    "id": 7,
-    "title": "Tech Startup Rebrand",
-    "category": "Branding",
-    "description": "Complete brand transformation resulting in 300% growth in brand recognition",
-    "image": "https://source.unsplash.com/random/400x300/?brand,identity",
-    "client": "Tech Startup"
-  },
-  {
-    "id": 8,
-    "title": "Corporate Identity Design",
-    "category": "Branding",
-    "description": "Modern logo and brand guidelines for established corporation",
-    "image": "https://source.unsplash.com/random/400x300/?logo,design",
-    "client": "Fortune 500 Company"
-  },
-  {
-    "id": 9,
-    "title": "Product Packaging",
-    "category": "Branding",
-    "description": "Innovative packaging design that increased market share by 25%",
-    "image": "https://source.unsplash.com/random/400x300/?packaging,design",
-    "client": "Consumer Brand"
-  },
-  {
-    "id": 10,
-    "title": "Fashion Campaign",
-    "category": "Shoots",
-    "description": "High-end fashion photography for luxury brand campaign",
-    "image": "https://source.unsplash.com/random/400x300/?fashion,photography",
-    "client": "Luxury Fashion Brand"
-  },
-  {
-    "id": 11,
-    "title": "Commercial Production",
-    "category": "Shoots",
-    "description": "Cinematic commercial video production with professional actors",
-    "image": "https://source.unsplash.com/random/400x300/?commercial,shoot",
-    "client": "Consumer Goods"
-  },
-  {
-    "id": 12,
-    "title": "Executive Portraits",
-    "category": "Shoots",
-    "description": "Professional headshots and executive portraits for corporate leaders",
-    "image": "https://source.unsplash.com/random/400x300/?portrait,photography",
-    "client": "Corporate"
-  }
-]
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Political Campaign 1",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 1.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 2,
+      "title": "Political Campaign 2",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 2.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 3,
+      "title": "Political Campaign 3",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 3.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 4,
+      "title": "Political Campaign 4",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 4.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 5,
+      "title": "Political Campaign 5",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 5.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 6,
+      "title": "Political Campaign 6",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 6.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 7,
+      "title": "Political Campaign 7",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 7.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 8,
+      "title": "Political Campaign 8",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 8.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 9,
+      "title": "Political Campaign 9",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 9.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 10,
+      "title": "Political Campaign 10",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 10.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 11,
+      "title": "Political Campaign 11",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 11.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 12,
+      "title": "Political Campaign 12",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 12.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 13,
+      "title": "Political Campaign 13",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 13.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 14,
+      "title": "Political Campaign 14",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 14.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 15,
+      "title": "Political Campaign 15",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 15.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 16,
+      "title": "Political Campaign 16",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 16.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 17,
+      "title": "Political Campaign 17",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 17.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 18,
+      "title": "Political Campaign 18",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 18.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 19,
+      "title": "Political Campaign 19",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 19.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 20,
+      "title": "Political Campaign 20",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 20.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 21,
+      "title": "Political Campaign 21",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 21.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 22,
+      "title": "Political Campaign 22",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 22.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 23,
+      "title": "Political Campaign 23",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 23.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 24,
+      "title": "Political Campaign 24",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 24.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 25,
+      "title": "Political Campaign 25",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 25.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 26,
+      "title": "Political Campaign 26",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 26.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 27,
+      "title": "Political Campaign 27",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 27.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 28,
+      "title": "Political Campaign 28",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 28.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 29,
+      "title": "Political Campaign 29",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 29.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 30,
+      "title": "Political Campaign 30",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 30.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 31,
+      "title": "Political Campaign 31",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 31.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 32,
+      "title": "Political Campaign 32",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 32.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 33,
+      "title": "Political Campaign 33",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 33.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 34,
+      "title": "Political Campaign 34",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 34.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 35,
+      "title": "Political Campaign 35",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 35.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 36,
+      "title": "Political Campaign 36",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 36.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 37,
+      "title": "Political Campaign 37",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 37.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 38,
+      "title": "Political Campaign 38",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 38.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 39,
+      "title": "Political Campaign 39",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 39.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 40,
+      "title": "Political Campaign 40",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 40.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 41,
+      "title": "Political Campaign 41",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 41.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 42,
+      "title": "Political Campaign 42",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 42.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 43,
+      "title": "Political Campaign 43",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 43.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 44,
+      "title": "Political Campaign 44",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 44.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 45,
+      "title": "Political Campaign 45",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 45.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 46,
+      "title": "Political Campaign 46",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 46.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 47,
+      "title": "Political Campaign 47",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 47.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 48,
+      "title": "Political Campaign 48",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 48.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 49,
+      "title": "Political Campaign 49",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 49.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 50,
+      "title": "Political Campaign 50",
+      "category": "Political",
+      "description": "High-impact political campaign visuals crafted for voter engagement and leadership messaging.",
+      "image": "/images/uploads/political/political 50.jpeg",
+      "client": "Political Campaign"
+    },
+    {
+      "id": 51,
+      "title": "Tech Conference 2024",
+      "category": "Events",
+      "description": "Full-service event management for 500+ attendees with live streaming",
+      "image": "/images/uploads/events-1.jpg",
+      "client": "Tech Corporation"
+    },
+    {
+      "id": 52,
+      "title": "Product Launch Event",
+      "category": "Events",
+      "description": "Spectacular product unveiling with media coverage and stakeholder engagement",
+      "image": "/images/uploads/events-2.jpg",
+      "client": "Startup"
+    },
+    {
+      "id": 53,
+      "title": "Industry Awards Night",
+      "category": "Events",
+      "description": "Prestigious awards ceremony production with celebrity appearances",
+      "image": "/images/uploads/events-3.jpg",
+      "client": "Industry Association"
+    },
+    {
+      "id": 54,
+      "title": "Tech Startup Rebrand",
+      "category": "Branding",
+      "description": "Complete brand transformation resulting in 300% growth in brand recognition",
+      "image": "/images/uploads/branding-1.jpg",
+      "client": "Tech Startup"
+    },
+    {
+      "id": 55,
+      "title": "Corporate Identity Design",
+      "category": "Branding",
+      "description": "Modern logo and brand guidelines for established corporation",
+      "image": "/images/uploads/branding-2.jpg",
+      "client": "Fortune 500 Company"
+    },
+    {
+      "id": 56,
+      "title": "Product Packaging",
+      "category": "Branding",
+      "description": "Innovative packaging design that increased market share by 25%",
+      "image": "/images/uploads/branding-3.jpg",
+      "client": "Consumer Brand"
+    },
+    {
+      "id": 57,
+      "title": "Fashion Campaign",
+      "category": "Shoots",
+      "description": "High-end fashion photography for luxury brand campaign",
+      "image": "/images/uploads/shoots-1.jpg",
+      "client": "Luxury Fashion Brand"
+    },
+    {
+      "id": 58,
+      "title": "Commercial Production",
+      "category": "Shoots",
+      "description": "Cinematic commercial video production with professional actors",
+      "image": "/images/uploads/shoots-2.jpg",
+      "client": "Consumer Goods"
+    },
+    {
+      "id": 59,
+      "title": "Executive Portraits",
+      "category": "Shoots",
+      "description": "Professional headshots and executive portraits for corporate leaders",
+      "image": "/images/uploads/shoots-3.jpg",
+      "client": "Corporate"
+    }
+  ]
+}

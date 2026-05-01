@@ -1,3 +1,7 @@
+# Decap CMS config for portfolio JSON data.
+# Netlify Identity must be enabled in Netlify Site Settings.
+# Set Registration Preferences = Invite only and enable Git Gateway.
+# Only invited users can log in. No public signup allowed.
 backend:
   name: git-gateway
   branch: main
@@ -8,13 +12,16 @@ public_folder: /images/uploads
 collections:
   - name: portfolio
     label: Portfolio
-    folder: _portfolio
-    create: true
-    slug: "{{slug}}"
+    file: "portfolio-data.json"
+    format: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Category", name: "category", widget: "select", options: ["Political", "Events", "Branding", "Shoots", "Digital Marketing"], required: true }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - { label: "Client", name: "client", widget: "string", required: false }
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false }
+      - label: "Projects"
+        name: "projects"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Category", name: "category", widget: "select", options: ["Political", "Events", "Branding", "Shoots", "Digital Marketing"], required: true }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Image", name: "image", widget: "image", required: true }
+          - { label: "Client", name: "client", widget: "string", required: false }

@@ -165,6 +165,85 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* About Us Section Enhancements */
+        #about .space-y-8 {
+            animation: fadeInUpText 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        #about img {
+            filter: contrast(1.1);
+            transition: transform 0.5s ease-out;
+        }
+
+        #about img:hover {
+            transform: scale(1.03);
+        }
+
+        #about .relative.overflow-hidden::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        @keyframes fadeInUpText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Premium Hero Text Animation Styles */
+        #hero-text {
+            background: linear-gradient(135deg, #00FF88 0%, #00CCAA 50%, #0099CC 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            position: relative;
+            min-height: 1.2em;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroEntrance 0.8s ease-out 0.2s forwards;
+        }
+
+        #hero-text::after {
+            content: '|';
+            display: inline;
+            color: #00FF88;
+            animation: blink 0.7s infinite;
+            opacity: 1;
+            margin-left: 2px;
+            transition: opacity 0.4s ease-out;
+        }
+
+        #hero-text.typing-complete::after {
+            opacity: 0;
+        }
+
+        @keyframes heroEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
     </style>
     <!-- Netlify Identity Widget for Admin Panel -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -175,9 +254,10 @@
             <a href="index.html" class="text-lg md:text-xl font-semibold tracking-[0.25em] text-green-400">Grow X Technologies</a>
             <nav class="hidden md:flex items-center gap-10 text-sm tracking-[0.2em] text-muted">
                 <a href="#home" class="hover:text-green-400 transition">Home</a>
-                <a href="#about" class="hover:text-green-400 transition">About</a>
+                <a href="#about" class="hover:text-green-400 transition">About Us</a>
                 <a href="#services" class="hover:text-green-400 transition">Services</a>
                 <a href="#portfolio" class="hover:text-green-400 transition">Portfolio</a>
+                <a href="#founders" class="hover:text-green-400 transition">Who We Are</a>
                 <a href="#contact-preview" class="hover:text-green-400 transition">Contact</a>
             </nav>
             <div class="flex items-center gap-4">
@@ -190,9 +270,10 @@
         <div id="mobile-menu" class="hidden bg-[#0B0B0B] border-t border-[#1F1F1F]">
             <div class="container py-4 space-y-3 text-sm text-muted">
                 <a href="#home" class="block hover:text-green-400 transition">Home</a>
-                <a href="#about" class="block hover:text-green-400 transition">About</a>
+                <a href="#about" class="block hover:text-green-400 transition">About Us</a>
                 <a href="#services" class="block hover:text-green-400 transition">Services</a>
                 <a href="#portfolio" class="block hover:text-green-400 transition">Portfolio</a>
+                <a href="#founders" class="block hover:text-green-400 transition">Who We Are</a>
                 <a href="#contact-preview" class="block hover:text-green-400 transition">Contact</a>
                 <a href="#contact-preview" class="block mt-2 btn-primary text-center">Get Consultation</a>
             </div>
@@ -204,8 +285,8 @@
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,255,136,0.16),_transparent_26%),_linear-gradient(180deg,_rgba(11,11,11,0.8),_rgba(11,11,11,0.95))]"></div>
             <div class="container relative grid items-center gap-12 lg:grid-cols-2">
                 <div class="space-y-8 max-w-2xl fade-in-on-scroll">
-                    <span class="text-xs uppercase tracking-[0.45em] text-green-400">Premium Agency</span>
-                    <h1 class="text-[56px] font-black leading-[1.03]">Driving influence. Building brands. Delivering growth.</h1>
+                    <span class="text-xs uppercase tracking-[0.45em] text-green-400">GrowX Technology Pvt. Limited</span>
+                    <h1 id="hero-text" class="text-[56px] font-black leading-[1.03]"></h1>
                     <p class="max-w-xl text-[16px] leading-[1.75] text-muted">We help brands, businesses and leaders grow through sharp strategy, premium media and measurable execution.</p>
                     <div class="flex flex-col gap-4 sm:flex-row">
                         <a href="#contact-preview" class="btn-primary inline-flex items-center justify-center">Get Free Consultation</a>
@@ -213,7 +294,7 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-[24px] border border-[#1F1F1F] shadow-glow fade-in-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="Creative agency workspace" class="h-[520px] w-full object-cover" />
+                    <img src="images/office.png" alt="Grow X office workspace" class="h-[520px] w-full object-cover filter blur-[1px]" />
                     <div class="absolute inset-0 hero-overlay"></div>
                     <div class="absolute left-6 bottom-6 rounded-[16px] border border-[#1F1F1F] bg-black/70 px-4 py-3 text-sm text-green-400 backdrop-blur-sm">
                         <p>Featured Case</p>
@@ -248,114 +329,265 @@
             <div class="container grid gap-12 lg:grid-cols-2 items-center">
                 <div class="relative overflow-hidden rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
                     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Team collaboration" class="h-full w-full object-cover" />
-                    <div class="absolute left-6 top-6 rounded-[14px] border border-[#1F1F1F] bg-black/80 px-4 py-3 text-sm text-green-400 backdrop-blur-sm">5+ Years Experience</div>
+                    <div class="absolute left-6 top-6 rounded-[14px] border border-[#1F1F1F] bg-black/80 px-4 py-3 text-sm text-green-400 backdrop-blur-sm">5+ Years of Execution Excellence</div>
                 </div>
                 <div class="space-y-8">
-                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">Who We Are</span>
-                    <h2 class="text-[36px] font-semibold">Premium strategy meets flawless execution.</h2>
-                    <p class="text-[16px] leading-[1.75] text-muted max-w-xl">Grow X Technologies is a premium growth agency that blends strategy, creative production and campaign execution. We partner with clients who want exceptional business outcomes, not just activity.</p>
-                    <a href="about.html" class="btn-secondary inline-flex items-center justify-center">Know More</a>
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">About Us</span>
+                    <h2 class="text-[36px] font-semibold">We turn strategy into measurable growth.</h2>
+                    <p class="text-[16px] leading-[1.85] text-muted max-w-xl">GrowX Technology Pvt. Limited partners with ambitious brands to turn strategy into real growth. From product development to campaign execution, we focus on outcomes that move the business forward.</p>
+                    <div class="text-[14px] text-muted/70 tracking-[0.05em] mt-4">Trusted by 20+ brands • 50+ campaigns delivered</div>
+                    <a href="about.html" class="btn-secondary inline-flex items-center justify-center transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(0,255,136,0.15)] hover:border-green-400/60">Explore Our Work</a>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="py-20 bg-[#121212] fade-in-on-scroll">
+        <section id="services" class="py-20 bg-[#050816] fade-in-on-scroll">
             <div class="container">
                 <div class="max-w-3xl space-y-4 text-center mx-auto mb-12">
                     <span class="text-sm uppercase tracking-[0.35em] text-green-400">What We Do</span>
-                    <h2 class="text-[36px] font-semibold">Core services for high-impact brands.</h2>
+                    <h2 class="text-[36px] font-semibold">Core services for <span class="text-green-400">high-impact brands</span>.</h2>
                 </div>
-                <div class="grid gap-6">
-                    <div class="grid gap-6 lg:grid-cols-3">
-                        <article class="card-surface fade-in-on-scroll">
-                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3 class="text-[22px] font-medium mb-3">Digital Marketing</h3>
-                            <p class="text-[16px] leading-[1.75] text-muted">Strategy, campaigns, ads and content to grow your footprint.</p>
-                        </article>
-                        <article class="card-surface fade-in-on-scroll">
-                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
-                                <i class="fas fa-bullhorn"></i>
-                            </div>
-                            <h3 class="text-[22px] font-medium mb-3">Political Campaigns</h3>
-                            <p class="text-[16px] leading-[1.75] text-muted">Messaging, outreach and engagement built to win.</p>
-                        </article>
-                        <article class="card-surface fade-in-on-scroll">
-                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
-                                <i class="fas fa-video"></i>
-                            </div>
-                            <h3 class="text-[22px] font-medium mb-3">Media Production</h3>
-                            <p class="text-[16px] leading-[1.75] text-muted">Video, photography and branded content with premium polish.</p>
-                        </article>
-                    </div>
-                    <div class="grid gap-6 lg:grid-cols-2">
-                        <article class="card-surface fade-in-on-scroll">
-                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <h3 class="text-[22px] font-medium mb-3">Event Management</h3>
-                            <p class="text-[16px] leading-[1.75] text-muted">Planning and executing high-impact live and hybrid experiences.</p>
-                        </article>
-                        <article class="card-surface fade-in-on-scroll">
-                            <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400 text-black mb-5">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <h3 class="text-[22px] font-medium mb-3">Branding & PR</h3>
-                            <p class="text-[16px] leading-[1.75] text-muted">Identity, positioning and reputation management for premium brands.</p>
-                        </article>
-                    </div>
+
+                <div class="grid gap-6 lg:grid-cols-[1.35fr_1fr]">
+                    <article class="group relative overflow-hidden rounded-[28px] border border-green-400/20 bg-gradient-to-br from-[#081112] via-[#061b1b] to-[#0b0f1c] p-8 shadow-[0_35px_100px_rgba(0,255,136,0.15)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_45px_120px_rgba(0,255,136,0.28)]">
+                        <div class="inline-flex rounded-full border border-green-400/30 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-green-300 mb-6">Core Service</div>
+                        <div class="mb-6">
+                            <h3 class="text-[32px] font-bold leading-[1.05] text-white">Development & AI Solutions</h3>
+                            <p class="mt-4 max-w-xl text-[16px] leading-[1.8] text-gray-300">We build premium digital products, intelligent automation, and modern data platforms that scale.</p>
+                        </div>
+                        <ul class="space-y-3 text-[15px] text-gray-300 mb-8">
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>Web & Mobile Development</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>AI Agents & Automation</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>Data Engineering (Spark, Kafka)</li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 to-cyan-300 px-8 py-4 text-sm font-semibold text-black transition-all duration-300 hover:shadow-[0_18px_40px_rgba(163,255,18,0.35)] hover:scale-[1.02]">
+                            Build with us
+                        </a>
+                    </article>
+
+                    <article class="group overflow-hidden rounded-[28px] border border-green-400/10 bg-[#0e121e] p-8 shadow-[0_18px_50px_rgba(0,255,136,0.1)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(0,255,136,0.2)]">
+                        <div class="inline-flex rounded-full border border-green-400/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-green-300 mb-6">Specialized</div>
+                        <div class="mb-6">
+                            <h3 class="text-[28px] font-bold leading-[1.05] text-white">Political Campaign & PR</h3>
+                            <p class="mt-4 max-w-xl text-[16px] leading-[1.8] text-gray-300">Strategic outreach and public relations designed for high-impact political stories.</p>
+                        </div>
+                        <ul class="space-y-3 text-[15px] text-gray-300 mb-8">
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>Campaign Strategy</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>Digital Outreach</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span>Public Relations</li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center justify-center rounded-full border border-green-400/30 bg-transparent px-8 py-4 text-sm font-semibold text-green-300 transition-all duration-300 hover:bg-green-400/10 hover:text-white hover:shadow-[0_18px_40px_rgba(0,255,136,0.18)] hover:scale-[1.02]">
+                            Plan your campaign
+                        </a>
+                    </article>
+                </div>
+
+                <div class="mt-8 grid gap-6 lg:grid-cols-3">
+                    <article class="group overflow-hidden rounded-[24px] border border-[#1b1f29] bg-[#090c17] p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-green-400/25 hover:shadow-[0_20px_40px_rgba(0,255,136,0.08)]">
+                        <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-green-400/10 text-green-300">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-[20px] font-semibold text-white mb-3">Digital Marketing</h3>
+                        <p class="text-[15px] leading-[1.75] text-gray-400">Performance-driven campaigns with premium creative and ROI focus.</p>
+                    </article>
+                    <article class="group overflow-hidden rounded-[24px] border border-[#1b1f29] bg-[#090c17] p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-green-400/25 hover:shadow-[0_20px_40px_rgba(0,255,136,0.08)]">
+                        <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3 class="text-[20px] font-semibold text-white mb-3">Social Media Marketing</h3>
+                        <p class="text-[15px] leading-[1.75] text-gray-400">Strategic social campaigns for engagement, reach and audience connection.</p>
+                    </article>
+                    <article class="group overflow-hidden rounded-[24px] border border-[#1b1f29] bg-[#090c17] p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-green-400/25 hover:shadow-[0_20px_40px_rgba(0,255,136,0.08)]">
+                        <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-400/10 text-purple-300">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-[20px] font-semibold text-white mb-3">Branding & Strategy</h3>
+                        <p class="text-[15px] leading-[1.75] text-gray-400">Premium brand systems and strategy that elevate perception and position.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="portfolio" class="py-20 fade-in-on-scroll">
             <div class="container">
-                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-10">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">Our Work</span>
+                    <h2 class="text-[36px] font-semibold mt-4">Work That Speaks for Our Execution</h2>
+                    <p class="text-[16px] leading-[1.75] text-muted mt-6">Showcasing our premium solutions across development, campaigns, and creative execution.</p>
+                </div>
+
+                <!-- Development & AI Solutions -->
+                <div class="mb-20">
+                    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-8">
+                        <div>
+                            <h3 class="text-[28px] font-semibold text-white">Development & AI Solutions</h3>
+                            <p class="text-[16px] leading-[1.6] text-muted mt-2">Cutting-edge applications, intelligent dashboards, and AI-powered platforms that drive business growth.</p>
+                        </div>
+                        <a href="portfolio.html?category=development-ai" class="btn-secondary inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(0,255,136,0.15)] hover:border-green-400/60">
+                            View All →
+                        </a>
+                    </div>
+                    <div class="grid gap-6 lg:grid-cols-3">
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="AI Dashboard Interface" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Mobile App Development" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="AI Analytics Platform" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Political Campaigns -->
+                <div class="mb-20">
+                    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-8">
+                        <div>
+                            <h3 class="text-[28px] font-semibold text-white">Political Campaigns</h3>
+                            <p class="text-[16px] leading-[1.6] text-muted mt-2">Strategic campaign management, voter engagement platforms, and data-driven political communication.</p>
+                        </div>
+                        <a href="portfolio.html?category=political-campaigns" class="btn-secondary inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(0,255,136,0.15)] hover:border-green-400/60">
+                            View All →
+                        </a>
+                    </div>
+                    <div class="grid gap-6 lg:grid-cols-3">
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="/images/uploads/political/political%201.jpeg" alt="Campaign Rally" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="/images/uploads/political/political%202.jpeg" alt="Digital Campaign Assets" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="/images/uploads/political/political%203.jpeg" alt="Voter Engagement Platform" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Branding & Media Execution -->
+                <div class="mb-20">
+                    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-8">
+                        <div>
+                            <h3 class="text-[28px] font-semibold text-white">Branding & Media Execution</h3>
+                            <p class="text-[16px] leading-[1.6] text-muted mt-2">Premium brand photography, event production, and creative media solutions that captivate audiences.</p>
+                        </div>
+                        <a href="portfolio.html?category=branding-media" class="btn-secondary inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(0,255,136,0.15)] hover:border-green-400/60">
+                            View All →
+                        </a>
+                    </div>
+                    <div class="grid gap-6 lg:grid-cols-3">
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80" alt="Brand Photography Shoot" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Event Production" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio-card rounded-[20px] border border-[#1F1F1F] bg-[#121212] overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="Creative Media Campaign" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="portfolio-overlay">
+                                <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="founders" class="py-20 bg-[#0B0B0B] fade-in-on-scroll">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-sm uppercase tracking-[0.35em] text-green-400">OUR FOUNDERS</span>
+                    <h2 class="text-[36px] font-semibold mt-4">The Visionary Team Behind <span class="text-green-400">GrowX</span></h2>
+                    <p class="text-[16px] leading-[1.75] text-muted mt-6">Meet the visionary leaders driving innovation, strategy, and premium execution at GrowX Technology Pvt. Limited.</p>
+                </div>
+                <div class="grid gap-8 lg:grid-cols-2 xl:grid-cols-4">
+                    <div class="group relative overflow-hidden rounded-[20px] border border-[#1F1F1F] bg-[#111] p-8 text-center shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,136,0.3)]">
+                        <div class="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-2 border-green-400">
+                            <img src="images/founders/aashu-kumar.jpeg" alt="Founder 1" class="h-full w-full object-cover" />
+                        </div>
+                        <h3 class="text-[24px] font-bold text-white mb-2">Aashu Kumar Jha</h3>
+                        <p class="text-[16px] font-medium text-green-400 mb-4">CEO & Founder</p>
+                        <p class="text-[14px] leading-[1.6] text-muted mb-6">Visionary leader with 10+ years in digital strategy and brand transformation. IIITIAN with expertise in scaling enterprise solutions and driving premium growth.</p>
+                        <a href="https://www.linkedin.com/in/aashu-kumar-jha/" target="_blank" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1F1F1F] bg-[#0F0F0F] text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-[20px] border border-[#1F1F1F] bg-[#111] p-8 text-center shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,136,0.3)]">
+                        <div class="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-2 border-green-400">
+                            <img src="images/founders/ayush-shukla.jpeg" alt="CTO Ayush Shukla" class="h-full w-full object-cover" />
+                        </div>
+                        <h3 class="text-[24px] font-bold text-white mb-2">Ayush Shukla</h3>
+                        <p class="text-[16px] font-medium text-green-400 mb-4">CTO & Co-Founder</p>
+                        <p class="text-[14px] leading-[1.6] text-muted mb-6">Technical visionary leading product development and AI innovation. IIITIAN with expertise in scalable architectures and cutting-edge technology solutions.</p>
+                        <a href="https://www.linkedin.com/in/ayush-shukla-a77323224/" target="_blank" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1F1F1F] bg-[#0F0F0F] text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-[20px] border border-[#1F1F1F] bg-[#111] p-8 text-center shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,136,0.3)]">
+                        <div class="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-2 border-green-400">
+                            <img src="images/founders/prasad-sonwane.jpeg" alt="Founder 2" class="h-full w-full object-cover" />
+                        </div>
+                        <h3 class="text-[24px] font-bold text-white mb-2">Prasad Sonwane</h3>
+                        <p class="text-[16px] font-medium text-green-400 mb-4">CMO & Co-Founder</p>
+                        <p class="text-[14px] leading-[1.6] text-muted mb-6">Creative director specializing in political campaigns and brand storytelling. Masters the art of premium content creation.</p>
+                        <a href="https://www.linkedin.com/in/prasad-sonwane/" target="_blank" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1F1F1F] bg-[#0F0F0F] text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-[20px] border border-[#1F1F1F] bg-[#111] p-8 text-center shadow-glow transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,136,0.3)]">
+                        <div class="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-2 border-green-400">
+                            <img src="images/founders/shivam-kumar.jpeg" alt="Founder 3" class="h-full w-full object-cover" />
+                        </div>
+                        <h3 class="text-[24px] font-bold text-white mb-2">Shivam Kumar</h3>
+                        <p class="text-[16px] font-medium text-green-400 mb-4">COO & Co-Founder</p>
+                        <p class="text-[14px] leading-[1.6] text-muted mb-6">Operations expert ensuring flawless execution of complex campaigns and events. Delivers premium results on time.</p>
+                        <a href="https://www.linkedin.com/in/shivam-kumar-121/" target="_blank" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1F1F1F] bg-[#0F0F0F] text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gradient-to-r from-[#0B0B0B] to-[#111] fade-in-on-scroll">
+            <div class="container">
+                <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+                    <div class="max-w-xl">
+                        <h2 class="text-[32px] font-semibold leading-[1.2]">Together, we are building more than a company.</h2>
+                        <p class="text-[16px] text-muted mt-4 leading-[1.6]">We're creating a movement of premium growth strategies that transform businesses and drive real impact.</p>
+                    </div>
                     <div>
-                        <span class="text-sm uppercase tracking-[0.35em] text-green-400">Our Work</span>
-                        <h2 class="text-[36px] font-semibold mt-4">Portfolio highlights</h2>
+                        <a href="#contact-preview" class="btn-primary inline-flex items-center justify-center gap-3">
+                            Let's Work Together
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="flex flex-wrap gap-3 text-sm text-muted">
-                        <span class="rounded-full border border-[#1F1F1F] bg-[#0F0F0F] px-4 py-2">Events</span>
-                        <span class="rounded-full border border-[#1F1F1F] bg-[#0F0F0F] px-4 py-2">Political</span>
-                        <span class="rounded-full border border-[#1F1F1F] bg-[#0F0F0F] px-4 py-2">Production</span>
-                    </div>
-                </div>
-                <div class="grid gap-6 lg:grid-cols-4 lg:auto-rows-[240px]">
-                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212] lg:col-span-2 lg:row-span-2">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Featured campaign" class="h-full w-full object-cover" />
-                        <div class="portfolio-overlay">
-                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
-                        </div>
-                    </a>
-                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
-                        <img src="https://images.unsplash.com/photo-1515165562835-caf8d7cdb9f4?auto=format&fit=crop&w=800&q=80" alt="Brand shoot" class="h-full w-full object-cover" />
-                        <div class="portfolio-overlay">
-                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
-                        </div>
-                    </a>
-                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
-                        <img src="https://images.unsplash.com/photo-1517244683846-8af5f7cc0b1d?auto=format&fit=crop&w=800&q=80" alt="Strategy meeting" class="h-full w-full object-cover" />
-                        <div class="portfolio-overlay">
-                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
-                        </div>
-                    </a>
-                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212]">
-                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Live event" class="h-full w-full object-cover" />
-                        <div class="portfolio-overlay">
-                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
-                        </div>
-                    </a>
-                    <a href="#" class="portfolio-card rounded-[24px] border border-[#1F1F1F] bg-[#121212] lg:col-span-2">
-                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Campaign launch" class="h-full w-full object-cover" />
-                        <div class="portfolio-overlay">
-                            <span class="text-sm uppercase tracking-[0.35em] text-green-400">View Project</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-10 text-center">
-                    <a href="portfolio.html" class="btn-secondary inline-flex items-center justify-center">View Full Portfolio</a>
                 </div>
             </div>
         </section>
@@ -586,5 +818,30 @@
     </a>
 
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const element = document.getElementById('hero-text');
+            const fullText = "Driving influence. Building brands. Delivering growth.";
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < fullText.length) {
+                    element.textContent += fullText[charIndex];
+                    charIndex++;
+                    // Premium typing speed: 50ms per character
+                    setTimeout(type, 50);
+                } else {
+                    // Typing complete - smoothly fade out cursor
+                    setTimeout(() => {
+                        element.classList.add('typing-complete');
+                    }, 800);
+                }
+            }
+
+            // Start typing after initial delay
+            setTimeout(type, 400);
+        });
+    </script>
 </body>
 </html>
